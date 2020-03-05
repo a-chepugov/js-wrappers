@@ -1,0 +1,65 @@
+{
+  "name": "js-wrappers",
+  "version": "3.0.0",
+  "description": "Different functions for development",
+  "main": "index.mjs",
+  "scripts": {
+    "prepublishOnly": "npm run test",
+    "build": "tsc",
+    "build:development": "tsc --watch",
+    "postbuild-micro": "esbuild ./source/index.ts --bundle --outdir=./build/bundle --platform=node --packages=external --keep-names --minify",
+    "postbuild-mini": "esbuild ./source/index.ts --bundle --outdir=./build/bundle --platform=node --packages=external --keep-names --minify-syntax",
+    "postbuild": "esbuild ./source/index.ts --bundle --outdir=./build/bundle --platform=node --packages=external --keep-names",
+    "clean": "rm -rf ./build",
+    "build:clean": "npm run js:delete && npm run js:build",
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch",
+    "preversion": "npm run test",
+    "lint": "eslint source/**/*.js",
+    "lint:fix": "eslint --fix source/**/*.js",
+    "test:development": "jest --detectOpenHandles --verbose --watchAll",
+    "test": "jest --detectOpenHandles --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-chepugov/helpers-js.git"
+  },
+  "keywords": [
+    "js",
+    "helpers"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-chepugov/helpers-js/issues"
+  },
+  "homepage": "https://github.com/a-chepugov/helpers-js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/amqplib": "^0.10.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
+    "amqplib": "^0.10.3",
+    "babel-jest": "^27.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.2.1",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.14",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^3.0.0"
+  }
+}

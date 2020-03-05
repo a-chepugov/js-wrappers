@@ -1,0 +1,30 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"rootDir": "source",
+		"outDir": "build",
+		"module": "commonjs",
+		"target": "ESNext",
+		"moduleResolution" : "node",
+		"declaration": true,
+		"emitDeclarationOnly": false,
+		"alwaysStrict": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"allowJs": false,
+		"checkJs": false,
+		"removeComments": true,
+		"stripInternal": true,
+		"sourceMap": true,
+		"noErrorTruncation": true,
+		"pretty": false
+	},
+	"exclude": [
+		"./*.js",
+		"./*.ts",
+		"build",
+		"docs",
+		"./node_modules/**/*.ts",
+		"**/*.test.ts"
+	]
+}

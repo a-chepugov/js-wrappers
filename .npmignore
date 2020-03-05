@@ -1,0 +1,7 @@
+.idea
+.editorconfig
+coverage
+docs
+source
+typedoc.js
+tsconfig.json

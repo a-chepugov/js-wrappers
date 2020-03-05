@@ -1,0 +1,6 @@
+.git/
+.idea/
+coverage
+node_modules/
+doc/
+build/
