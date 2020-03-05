@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "build/",
+    "rootDir": "source/",
+    "module": "commonjs",
+    "target": "ES2015",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "noErrorTruncation": true,
+    "pretty": true
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "**/*.test.ts"
+  ]
+}
